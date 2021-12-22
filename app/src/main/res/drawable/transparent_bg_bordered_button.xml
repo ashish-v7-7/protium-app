@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021.
+  ~ Created by - Ashish Singh
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="0dp"
+        android:drawable="@drawable/capsule_primary_outline"
+        android:top="0dp" />
+</layer-list>

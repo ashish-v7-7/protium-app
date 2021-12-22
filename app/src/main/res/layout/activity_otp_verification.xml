@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021.
+  ~ Created by - Ashish Singh
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignInActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sign_in_forms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/activity_sign_in_logo"
+                android:layout_width="220dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/protium_header_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_sign_in_logo">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="OTP send to"
+                    android:textColor="@color/hintText"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/activity_otp_verification_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="+9870881332"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <EditText
+                        android:id="@+id/etOtp"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="#e9e9e9"
+                        android:gravity="center"
+                        android:hint="Enter Otp"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColor="@color/text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/activity_otp_verification_otp_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Code expire in 2 minutes."
+                        android:textColor="#6A6A6A"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/activity_otp_verification_cross_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/activity_otp_verification_cross_image" />
+
+
+                    <ImageView
+
+                        android:id="@+id/activity_otp_verification_cross_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:src="@android:drawable/ic_delete"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/activity_otp_verification_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/btn_custom"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/activity_otp_verification_resend_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/transparent_bg_bordered_button"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Re-send"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:text="By continuing, you agree to Protium\'s."
+            android:textSize="16sp"
+
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/activity_otp_verification_terms_And_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="Terms and Conditions"
+                android:textColor="@color/colorPrimary"
+
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:paddingTop="4dp"
+                android:text="and"
+                android:textColor="@color/hintText"
+
+                />
+
+            <TextView
+                android:id="@+id/activity_otp_verification_privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+
+                android:text="Privacy Policy"
+                android:textColor="@color/colorPrimary"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

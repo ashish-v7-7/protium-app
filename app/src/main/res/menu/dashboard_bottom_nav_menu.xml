@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021.
+  ~ Created by - Ashish Singh
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard_bottom_nav_home"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/dashboard_bottom_nav_explore"
+        android:icon="@drawable/ic_outline_explore_24"
+        android:title="Explore" />
+    <item
+        android:id="@+id/dashboard_bottom_nav_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/dashboard_bottom_nav_setting"
+        android:icon="@drawable/ic_outline_settings_24"
+        android:title="Setting" />
+</menu>

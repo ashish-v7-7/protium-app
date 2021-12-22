@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021.
+  ~ Created by - Ashish Singh
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ExploreFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/explore_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/explore_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="Explore"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_outline_explore_24"
+                app:drawableTint="@color/black" />
+
+            <ImageView
+                android:id="@+id/explore_map"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="end"
+                android:paddingStart="18dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/ic_outline_map_24"
+                app:tint="@color/black" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/explore_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/explore_app_bar"
+        tools:listitem="@layout/item_explore" />
+
+</RelativeLayout>

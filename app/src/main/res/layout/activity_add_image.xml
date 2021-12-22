@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021.
+  ~ Created by - Ashish Singh
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddImageActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/setting_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/setting_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/activity_add_image_back"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:backgroundTint="@color/black"
+                android:backgroundTintMode="add"
+                android:paddingEnd="16dp"
+                app:drawableStartCompat="@drawable/ic_baseline_keyboard_backspace_24"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="Post"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_add_image_delete_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:text="Delete"
+                android:textColor="@color/red_800"
+                android:textSize="18sp"
+                android:visibility="invisible" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/activity_add_image_image"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_txt_border"
+        android:gravity="center"
+        android:padding="4dp"
+        android:src="@drawable/ic_outline_camera_alt_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_app_bar" />
+
+    <TextView
+        android:id="@+id/activity_add_image_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/white"
+        android:padding="4dp"
+        android:text="Edit"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/activity_add_image_image"
+        app:layout_constraintTop_toTopOf="@+id/activity_add_image_image" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColorHint="@color/hintText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_image_location">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_add_image_edit_text_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="Enter tag (Add Multiple by pressing Enter)"
+
+            android:textColor="@color/text"
+            android:textColorHint="#B3FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/activity_add_image_chip_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/activity_add_image_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Uttar Pradesh , India"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_image_image" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_add_image_save_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_custom"
+        android:gravity="center"
+        android:text="Create Post"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_image_chip_group" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021.
+  ~ Created by - Ashish Singh
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SettingFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/setting_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/setting_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:backgroundTint="@color/black"
+                android:backgroundTintMode="add"
+                android:paddingEnd="16dp"
+                app:drawableStartCompat="@drawable/ic_baseline_keyboard_backspace_24"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="Setting"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/setting_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/setting_app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/setting_profile_image"
+
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:src="@drawable/fb_icon"
+                        app:civ_border_color="@color/colorPrimary"
+                        app:civ_border_width="2dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/setting_user_full_name"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:drawablePadding="4dp"
+                        android:text="Ashish Singh Chauhan"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+
+                        app:drawableEndCompat="@drawable/ic_baseline_edit_24"
+                        app:drawableTint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/setting_user_login_id"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="ashishsinghchauhan0098@gmailcom"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/setting_update_profile_picture"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Update Profile Picture"
+                        android:textColor="@color/blue_600" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/setting_change_language"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Change Language"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_language_24"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:id="@+id/setting_privacy_policy"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_outline_privacy_tip_24"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:id="@+id/setting_terms_of_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Terms of Use"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_library_books_24"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:id="@+id/setting_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Help"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_outline_help_outline_24"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:id="@+id/setting_about_us"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="About"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_error_outline_24"
+                app:drawableTint="@color/black" />
+
+            <TextView
+                android:id="@+id/setting_log_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="16dp"
+                android:text="Log Out"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_login_24"
+                app:drawableTint="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

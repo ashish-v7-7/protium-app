@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2021.
+  ~ Created by - Ashish Singh
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/custom_layout_title_des_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_layout_title_des_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/custom_layout_title_des_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingExtra="4dp"
+                android:text="As it turns out, you don't actually need any extra TextViews to do this. Simply include the HTML in your alert's call (which replaces the  call in your question) and pass it the html-formatted string. Be sure to only use in your formatting, though because those are the only tags it supports. If you're using a String resource for the text in your alert"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/custom_layout_title_des_close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:drawableEndCompat="@drawable/ic_baseline_close_24"
+        app:drawableTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/custom_layout_title_des_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/custom_layout_title_des_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

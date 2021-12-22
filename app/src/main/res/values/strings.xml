@@ -1,0 +1,13 @@
+<!--
+  ~ Copyright (c) 2021.
+  ~ Created by - Ashish Singh
+  -->
+
+<resources>
+    <string name="app_name">Protium</string>
+
+    <string name="facebook_app_id">305322244813568</string>
+    <string name="fb_login_protocol_scheme">fb305322244813568</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyB61iIvpS_NImrAZVuasqO_daqjNXotYdQ</string>
+</resources>
